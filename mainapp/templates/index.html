@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WOW | WORLD OF WOMEN</title>
+	<link rel="icon" href="{% static 'img/sonlogo.png' %}" type="image/png">
+  <link rel="stylesheet" href="{% static 'vendors/bootstrap/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/fontawesome/css/all.min.css' %}">
+	<link rel="stylesheet" href="{% static 'vendors/themify-icons/themify-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/nice-select/nice-select.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand logo_h" href="/"><img src="{% static 'img/sonlogo.png' %}" width="160" height="100" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Giyim</a>
+                <ul class="dropdown-menu">
+                  {% for i in giyimaltkategori %}
+                  <li class="nav-item"><a class="nav-link" href="#"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+</svg> {{ i }}</a></li>
+                  {% endfor %}
+                </ul>
+							</li>
+
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Aksesuar</a>
+                <ul class="dropdown-menu">
+                  {% for i in aksesuaraltkategori %}
+                  <li class="nav-item"><a class="nav-link" href="#"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+</svg> {{ i }}</a></li>
+                  {% endfor %}
+                </ul>
+							</li>
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Çanta</a>
+                <ul class="dropdown-menu">
+                  {% for i in çantaaltkategori %}
+                  <li class="nav-item"><a class="nav-link" href="#"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+</svg> {{ i }}</a></li>
+                  {% endfor %}
+                </ul>
+							</li>
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Hediyelik</a>
+                <ul class="dropdown-menu">
+                  {% for i in hediyelikaltkategori %}
+                  <li class="nav-item"><a class="nav-link" href="#"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+</svg> {{ i }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Blog</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="s#">Blog Detayları</a></li>
+                </ul>
+							</li>
+
+              <li class="nav-item"><a class="nav-link" href="#">İletişim</a></li>
+            </ul>
+
+            <ul class="nav-shop">
+              <li class="nav-item"><a class="button" href="#"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+  <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+</svg> Giriş Yap</a></li>
+              <li class="nav-item"><button><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+</svg><span class="nav-shop__circle">0</span></button> </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+	<!--================ End Header Menu Area =================-->
+
+  <main class="site-main">
+
+    <!--================ Hero banner start =================-->
+    <section class="hero-banner">
+      <div class="container">
+        <div class="row no-gutters align-items-center pt-60px">
+          <div class="col-5 d-none d-sm-block">
+            <div class="hero-banner__img">
+              <img class="img-fluid" src="{% static 'img/home/deneme.png' %}" alt="">
+            </div>
+          </div>
+          <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
+            <div class="hero-banner__content">
+              <h4>Her ürünün bir hikayesi var..</h4>
+              <h1>YETENEKLİ KADINLARIMIZIN ELLERİNDEN !</h1>
+              <p>Yaptığınız alışverişler bir kadının hayatına umut oluyor. Göç yolundaki umutları yeşertmeye katkı sağlayan siz değerli
+              müşterilerimize minnettarız..  &#128151;</p>
+              <a class="button button-hero" href="#">HEMEN KEŞFET</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Hero banner start =================-->
+
+    <!--================ Hero Carousel start =================-->
+    <section class="section-margin mt-0">
+      <div class="owl-carousel owl-theme hero-carousel">
+        <div class="hero-carousel__slide">
+          <img src="{% static 'img/home/amigurumi-zurafa-kc7987666-1-e359284c2a274668b4419a88169227c1.jpg' %}"  alt="" width="200" height="500">
+          <a href="#" class="hero-carousel__slideOverlay">
+            <h3>Hediyelik Aksesuarlar</h3>
+            <p>Sevdiklerinize güzel bir süpriz yapın..</p>
+          </a>
+        </div>
+        <div class="hero-carousel__slide">
+          <img src="{% static 'img/home/0011901_siyah-piliseli-midi-boy-kadin-etek-106942.jpeg' %}" alt=""width="200" height="500">
+          <a href="#" class="hero-carousel__slideOverlay">
+            <h3>Kadın Giyim</h3>
+            <p>En trend kadın giyimlerine göz atın..</p>
+          </a>
+        </div>
+        <div class="hero-carousel__slide">
+          <img src="{% static 'img/home/hero-slide1.png' %}" alt="" width="200" height="500">
+          <a href="#" class="hero-carousel__slideOverlay">
+            <h3>Erkek Ayakkabı</h3>
+            <p>Popüler erkek ayakkabılarına hemen göz at!</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--================ Hero Carousel end =================-->
+
+    <!-- ================ trending product section start ================= -->
+    <section class="section-margin calc-60px">
+      <div class="container">
+        <div class="section-intro pb-60px">
+
+          <h2>Trend <span class="section-intro__style">Ürünler</span></h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="{% static 'img/product/product1.png' %}" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Aksesuarlar</p>
+                <h4 class="card-product__title"><a href="#">Kuvartz Kol Saati</a></h4>
+                <p class="card-product__price">150.00 TL</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="{% static 'img/product/product2.png' %}" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Güzellik</p>
+                <h4 class="card-product__title"><a href="#">Kadın Yüz Kremi</a></h4>
+                <p class="card-product__price">150.00 TL</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="{% static 'img/product/product3.png' %}" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Dekor</p>
+                <h4 class="card-product__title"><a href="#">Oda gece lambası</a></h4>
+                <p class="card-product__price">150.00 TL</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="{% static 'img/product/product4.png' %}" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Dekor</p>
+                <h4 class="card-product__title"><a href="#">Oda ışığı</a></h4>
+                <p class="card-product__price">150.00 TL</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="{% static 'img/product/product5.png' %}" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Çanta</p>
+                <h4 class="card-product__title"><a href="single-product.html">Erkek iş çantası</a></h4>
+                <p class="card-product__price">150.00 TL</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="{% static 'img/home/hero-slide1.png' %}" height="273" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Akyakkabı</p>
+                <h4 class="card-product__title"><a href="#">Erkek ayakkabı</a></h4>
+                <p class="card-product__price">150.00 TL</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="{% static 'img/product/product7.png' %}" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Aksesuar</p>
+                <h4 class="card-product__title"><a href="#">Blutooth kulaklık</a></h4>
+                <p class="card-product__price">150.00 TL</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="{% static 'img/home/0011901_siyah-piliseli-midi-boy-kadin-etek-106942.jpeg' %}" height="273" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Giyim</p>
+                <h4 class="card-product__title"><a href="#">Kadın etek</a></h4>
+                <p class="card-product__price">150.00 TL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ trending product section end ================= -->
+
+
+    <!-- ================ offer section start ================= -->
+    <section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-5">
+            <div class="offer__content text-center">
+              <h3>Yüzde 50% ye varan indirimler</h3>
+              <h4>Sonbahar İndirimi</h4>
+              <p>Türkiye'nin her yerine ücretsiz kargo</p>
+              <a class="button button--active mt-3 mt-xl-4" href="#">Şimdi Alışverişe Başla</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ offer section end ================= -->
+
+
+
+    <!-- ================ Blog section start ================= -->
+    <section class="blog">
+      <div class="container mt-3">
+        <div class="section-intro pb-20px">
+
+          <h2>Güncel <span class="section-intro__style">Haberler</span></h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card card-blog">
+              <div class="card-blog__img">
+                <img class="card-img rounded-0" src="img/blog/blog1.png" alt="">
+              </div>
+              <div class="card-body">
+                <ul class="card-blog__info">
+                  <li><a href="#">By Admin</a></li>
+                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                </ul>
+                <h4 class="card-blog__title"><a href="single-blog.html">The Richland Center Shooping News and weekly shooper</a></h4>
+                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
+                <a class="card-blog__link" href="#">Daha fazla oku <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card card-blog">
+              <div class="card-blog__img">
+                <img class="card-img rounded-0" src="img/blog/blog2.png" alt="">
+              </div>
+              <div class="card-body">
+                <ul class="card-blog__info">
+                  <li><a href="#">By Admin</a></li>
+                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                </ul>
+                <h4 class="card-blog__title"><a href="single-blog.html">The Shopping News also offers top-quality printing services</a></h4>
+                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
+                <a class="card-blog__link" href="#">Daha fazla oku <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card card-blog">
+              <div class="card-blog__img">
+                <img class="card-img rounded-0" src="img/blog/blog3.png" alt="">
+              </div>
+              <div class="card-body">
+                <ul class="card-blog__info">
+                  <li><a href="#">By Admin</a></li>
+                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                </ul>
+                <h4 class="card-blog__title"><a href="single-blog.html">Professional design staff and efficient equipment you’ll find we offer</a></h4>
+                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
+                <a class="card-blog__link" href="#">Daha fazla oku <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ Blog section end ================= -->
+
+    <!-- ================ Subscribe section start ================= -->
+    <section class="subscribe-position">
+      <div class="container">
+        <div class="subscribe text-center">
+          <h3 class="subscribe__title">Her zaman güncel kal</h3>
+          <p>Son gelen indirimlerden,güncel ürünlerden, blog yazılarından haberdar ol..</p>
+          <div id="mc_embed_signup">
+            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe-form form-inline mt-5 pt-1">
+              <div class="form-group ml-sm-auto">
+                <input class="form-control mb-1" type="email" name="EMAIL" placeholder="Email adresinizi girin" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" >
+                <div class="info"></div>
+              </div>
+              <button class="button button-subscribe mr-auto mb-1" type="submit">Gönder</button>
+              <div style="position: absolute; left: -5000px;">
+                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ================ Subscribe section end ================= -->
+
+
+
+  </main>
+
+
+  <!--================ Start footer Area  =================-->
+	<footer class="footer">
+		<div class="footer-area">
+			<div class="container">
+				<div class="row section_gap">
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="single-footer-widget tp_widgets">
+							<h4 class="footer_title large_title">Misyonumuz</h4>
+							<p>
+                Online site ve uygulama üzerinden yaptığın alışverişlerde seni düşündüren bir diğer konunun da ödeme güvenliği olduğunu biliyoruz. wow.com alış-satış sistemi senin hakların üzerine kurulu. Uygulamamız üzerinden gerçekleştireceğin tüm işlemler alış, satış ve ödemeler garanti altında.
+
+wow.com’da ödediğin miktar ürün eline hasarsız bir şekilde ulaştıktan sonra senin onayın alınır ve satıcının hesabına öyle yatırılır.
+							</p>
+
+						</div>
+					</div>
+					<div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+						<div class="single-footer-widget tp_widgets">
+							<h4 class="footer_title">Hızlı Linkler</h4>
+							<ul class="list">
+								<li><a href="#">Anasayfa</a></li>
+								<li><a href="#">Giyim</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Ürünler</a></li>
+								<li><a href="#">Markalar</a></li>
+								<li><a href="#">İletişim</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-6 col-sm-6">
+						<div class="single-footer-widget instafeed">
+							<h4 class="footer_title">Galeri</h4>
+							<ul class="list instafeed d-flex flex-wrap">
+								<li><img src="{% static 'img/gallery/r1.jpg' %}" alt=""></li>
+								<li><img src="{% static 'img/gallery/r2.jpg' %}" alt=""></li>
+								<li><img src="{% static 'img/gallery/r3.jpg' %}" alt=""></li>
+								<li><img src="{% static 'img/gallery/r7.jpg' %}" alt=""></li>
+								<li><img src="{% static 'img/gallery/r8.jpg' %}" alt=""></li>
+                <li><img src="{% static 'img/gallery/r5.jpg' %}" alt=""></li>
+							</ul>
+						</div>
+					</div>
+					<div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+						<div class="single-footer-widget tp_widgets">
+							<h4 class="footer_title">İletişim Kur</h4>
+							<div class="ml-40">
+								<p class="sm-head">
+									<span class="fa fa-location-arrow"></span>
+									Merkez Ofis
+								</p>
+								<p>Türk Kızılay</p>
+
+								<p class="sm-head">
+									<span class="fa fa-phone"></span>
+									Telefon Numarası
+								</p>
+								<p>
+									+123 456 7890 <br>
+									+123 456 7890
+								</p>
+
+								<p class="sm-head">
+									<span class="fa fa-envelope"></span>
+									Email
+								</p>
+								<p>
+									free@infoexample.com <br>
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row d-flex">
+					<p class="col-lg-12 footer-text text-center">
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Bu websitesinin teması <i class="fa fa-heart" aria-hidden="true"></i> Burak Tunca tarafından yapıldı</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================ End footer Area  =================-->
+
+
+
+  <script src="{% static 'vendors/jquery/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'vendors/bootstrap/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendors/skrollr.min.js' %}"></script>
+  <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'vendors/nice-select/jquery.nice-select.min.js' %}"></script>
+  <script src="{% static 'vendors/jquery.ajaxchimp.min.js' %}"></script>
+  <script src="{% static 'vendors/mail-script.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
